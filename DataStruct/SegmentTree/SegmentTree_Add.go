@@ -1,4 +1,4 @@
-package main
+package SegmentTree_Add
 
 import (
 	"bufio"
