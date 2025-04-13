@@ -23,8 +23,7 @@ func main() {
 		fmt.Scan(&v[i], &w[i])
 	}
 
-	// 枚举物品
-	for i := 1; i <= n; i++ {
+	for i := 1; i <= n; i++ { // 枚举物品
 		for j := v[i]; j <= m; j++ {
 			f[j] = max(f[j], f[j-v[i]]+w[i]) // 是否选当前物品
 		}
