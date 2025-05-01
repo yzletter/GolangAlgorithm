@@ -94,15 +94,15 @@ func main() {
 		fmt.Fscan(in, &a[i])
 	}
 
-	buildTree(1, n, 1)
+	buildTree(1, n, 1) // 建树
 
 	var op, l, r, x int
 	for i := 0; i < m; i++ {
 		fmt.Fscan(in, &op)
-		if op == 1 {
+		if op == 1 { // 区间修改
 			fmt.Fscan(in, &l, &r, &x)
 			modifyTree(1, n, 1, l, l, x)
-		} else {
+		} else { // 区间查询
 			fmt.Fscan(in, &l, &r)
 			fmt.Println(queryAns(1, n, 1, l, r))
 		}
